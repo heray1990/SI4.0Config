@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceInsightLayout
+	AppVer="4.00.0084"
+	AppVerMinReader="4.00.0030"
+	>
+	<!-- This is a Source Insight desktop layout file. -->
+	<!-- www.sourceinsight.com -->
+	<MainWindow
+		IsMaximized="1"
+		IsFullScreen="0"
+		>
+		<WindowRect Left="-8" Top="-8" Right="1928" Bottom="1048" />
+		<NormalWindowRect Left="30" Top="30" Right="1890" Bottom="1050" />
+	</MainWindow>
+	<Options>
+		<WindowTabOptions IsVisible="1" ShowPathInfo="1" SortOrder="Usage" />
+	</Options>
+	<PanelArea>
+		<WorkArea Left="0" Top="92" Right="1920" Bottom="1014" />
+		<TabTray IsVisible="0" />
+		<DockZones>
+			<Left>
+				<Rect Left="0" Top="96" Right="4" Bottom="707" />
+				<Contents/>
+			</Left>
+			<Top>
+				<Rect Left="0" Top="92" Right="1920" Bottom="96" />
+				<Contents/>
+			</Top>
+			<Right>
+				<Rect Left="1916" Top="96" Right="1920" Bottom="707" />
+				<Contents/>
+			</Right>
+			<Bottom>
+				<Rect Left="0" Top="707" Right="1920" Bottom="1014" />
+				<Contents>
+					<PanelHost
+						Title="if"
+						id="ContextPanelHost"
+						IsHidden="0"
+						PctTrans="0"
+						IsMinimized="0"
+						PanelCount="1"
+						idPalActive="ContextPanel"
+						>
+						<WindowRect Left="0" Top="711" Right="960" Bottom="1014" />
+						<PredockRect Left="785" Top="390" Right="1135" Bottom="690" />
+						<Panels>
+							<Panel id="ContextPanel" IsHidden="0" ViewToolbar="1" />
+						</Panels>
+					</PanelHost>
+					<PanelHost
+						Title="Relation"
+						id="RelationPanelHost"
+						IsHidden="0"
+						PctTrans="0"
+						IsMinimized="0"
+						PanelCount="1"
+						idPalActive="RelationPanel"
+						>
+						<WindowRect Left="960" Top="711" Right="1920" Bottom="1014" />
+						<PredockRect Left="100" Top="400" Right="450" Bottom="800" />
+						<Panels>
+							<Panel
+								id="RelationPanel"
+								IsHidden="0"
+								ViewToolbar="1"
+								>
+								<RelationOptions
+									ViewMode="Outline"
+									IsLocked="0"
+									ExcludeMacros="0"
+									ShowMetrics="0"
+									ShowGraphDetails="1"
+									GroupMultipleRefs="1"
+									ShowLineNumbers="0"
+									ShowFileName="1"
+									AutoExpandLevels="1"
+									CodeMetricsType="1"
+									SortType="2"
+									>
+									<TrackingOptions tracktype="1" InComments="0" InStrings="0" InAnyFile="0" />
+									<SymbolTypes All="1" />
+									<CodeMetricsFilter CodeMetricsType="1" MinValue="0" MaxValue="0" />
+									<ViewRelationRules
+										ForTypes="Contents"
+										ForFunctions="References"
+										ForVariables="References"
+										ForClasses="Inheritance"
+										ForFiles="None"
+										/>
+								</RelationOptions>
+								<Columns>
+									<Column0 ID="0" Width="192" />
+									<Column1 ID="2" Width="144" />
+								</Columns>
+							</Panel>
+						</Panels>
+					</PanelHost>
+				</Contents>
+			</Bottom>
+		</DockZones>
+		<Floating>
+			<PanelHost
+				Title="Bookmarks"
+				id="BookmarkPanelHost"
+				IsHidden="1"
+				PctTrans="0"
+				IsMinimized="0"
+				PanelCount="1"
+				idPalActive="BookmarkPanel"
+				>
+				<WindowRect Left="100" Top="210" Right="500" Bottom="400" />
+				<PredockRect Left="100" Top="210" Right="500" Bottom="400" />
+				<Panels>
+					<Panel id="BookmarkPanel" IsHidden="0" ViewToolbar="1" />
+				</Panels>
+			</PanelHost>
+		</Floating>
+	</PanelArea>
+	<RelationWindowGlobalOptions ShowAll="1" />
+</SourceInsightLayout>
