@@ -277,3 +277,32 @@ macro CodeBlockComment()
  
 	SetWndSel(hwnd, sel)
 }
+
+
+// Append comment, which formated as "//linzhaosen@yyyy/mm/dd", after the code in the same line.
+// Hotkey: Ctrl + Shift + /
+macro AddMyComment()
+{
+	hbuf = GetCurrentBuf()
+	ln = GetBufLnCur(hbuf)
+	szTime = GetSysTime(1)
+	buf = GetBufLine(hbuf, ln)
+
+	Day = szTime.Day
+	Month = szTime.Month
+	Year = szTime.Year
+
+	if (Day < 10)
+		szDay = "0@Day@"
+	else
+		szDay = Day
+
+	if (Month < 10)
+		szMonth = "0@Month@"
+	else
+		szMonth = Month
+
+	szInfo = cat(buf, "    //linzhaosen@@@Year@/@szMonth@/@szDay@")
+
+	PutBufLine(hbuf, ln, szInfo)
+}
