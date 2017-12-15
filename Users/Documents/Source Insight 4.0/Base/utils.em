@@ -245,7 +245,7 @@ macro ListAllSiblings(symbol)
 
 // Set a block of code as comment.
 // Add "#if 0" in front of a block of code and add "#endif" after.
-// Hotkey: Ctrl + #
+// Hotkey: Ctrl + Shift + 3
 macro CodeBlockComment()
 {
 	hwnd = GetCurrentWnd()
@@ -259,7 +259,11 @@ macro CodeBlockComment()
 	else
 		szIfStart = GetBufLine(hbuf, LnFirst - 1)
 
-	szIfEnd = GetBufLine(hbuf, lnLast + 1)
+	if (GetBufLine(hbuf, lnLast + 1) == Nil)
+		stop
+	else
+		szIfEnd = GetBufLine(hbuf, lnLast + 1)
+
 	if (szIfStart == "#if 0" && szIfEnd == "#endif")
 		{
 		DelBufLine(hbuf, lnLast + 1)
@@ -305,4 +309,14 @@ macro AddMyComment()
 	szInfo = cat(buf, "    //linzhaosen@@@Year@/@szMonth@/@szDay@")
 
 	PutBufLine(hbuf, ln, szInfo)
+}
+
+// Add Printf() for MTK solution.
+// Hotkey: Ctrl + Shift + P
+macro MTKPrintf()
+{
+	hbuf = GetCurrentBuf()
+	ln = GetBufLnCur(hbuf)
+
+	InsBufLine(hbuf, ln, "Printf(\"[linzhaosen][%s][%s][%d]\\n\", __FILE__, __FUNCTION__, __LINE__);")
 }
