@@ -317,6 +317,9 @@ macro MTKPrintf()
 {
 	hbuf = GetCurrentBuf()
 	ln = GetBufLnCur(hbuf)
+	buf = GetBufLine(hbuf, ln)
 
-	InsBufLine(hbuf, ln, "Printf(\"[linzhaosen][%s][%s][%d]\\n\", __FILE__, __FUNCTION__, __LINE__);")
+	szInfo = cat(buf, "Printf(\"[linzhaosen][%s][%s][%d]\\n\", __FILE__, __FUNCTION__, __LINE__);")
+
+	PutBufLine(hbuf, ln, szInfo)
 }
